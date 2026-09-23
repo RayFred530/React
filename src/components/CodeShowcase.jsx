@@ -20,6 +20,58 @@ const CodeShowcase = () => {
               boilerplate. native integration fo rpydantic schemes, JWT
               authentication tokens, and automatic OpenAPI generation.
             </p>
+
+            <ul className="space-y-3 text-sm text-gray-300 font-medium">
+              <li className="flex items-center gap-3">
+                <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">
+                  ✓
+                </span>
+                Fully asynchronous runtime execution
+              </li>
+
+              <li className="flex items-center gap-3">
+                <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">
+                  ✓
+                </span>
+                Type-safe ORM model via SQLAIchemy 2.0
+              </li>
+
+              <li className="flex items-center gap-3">
+                <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">
+                  ✓
+                </span>
+                Built-in rate limiting & CORS middleware
+              </li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-7 bg-[#030712] border border-indigo-900/60 rounded-2xl p-6 shadow-2xl shadow-indigo-950/60 font-mono text-xs text-gray-300">
+            <div className="flex items-center justify-between border-b border-gray-800 pb-4 mb-4">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+              </div>
+
+              <span className="text-gray-500 text-[11px]">main_router.py</span>
+            </div>
+
+            <pre className="overflow-x-auto leading-relaxed text-indigo-200">
+              <code>{`form fastapi import FastAPI, Depends
+from sqlalchemy.ext.asyncio import AsyncSession
+from apex_core import EngineSession, StreamRouter
+
+app = FastAPI(title="Apex MicroService API)
+router = StreamRouter(prefix=/v1/telemetry)
+
+@router.post("/dispatch")
+async def handles_stream(
+        payload: TelemetryScheme,
+        db: AsyncSession = Depennds(EngineSession)
+):
+result = await db.execute(payload.process_event())
+return {"status": "dispatched", "latency_ms": result.elapsed"}`}</code>
+            </pre>
           </div>
         </div>
       </div>
