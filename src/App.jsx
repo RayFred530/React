@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import BentoGrid from "./components/BentoGrid";
 import CodeShowcase from "./components/CodeShowcase";
 import SystemMetrics from "./components/SystemMetrics";
+import TechSpecGrid from "./components/TechSpecGrid";
+import PricingCard from "./components/PricingCard";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <BentoGrid />
         <CodeShowcase />
         <SystemMetrics />
+        <TechSpecGrid />
+        <PricingCard />
       </main>
     </div>
   );
