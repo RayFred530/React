@@ -5,6 +5,8 @@ import CodeShowcase from "./components/CodeShowcase";
 import SystemMetrics from "./components/SystemMetrics";
 import TechSpecGrid from "./components/TechSpecGrid";
 import PricingCard from "./components/PricingCard";
+import FAQSection from "./components/FAQSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <SystemMetrics />
         <TechSpecGrid />
         <PricingCard />
+        <FAQSection />
+        <Footer />
       </main>
     </div>
   );
