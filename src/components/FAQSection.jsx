@@ -20,7 +20,7 @@ const FAQSection = () => {
   return (
     <section
       id="faq"
-      className="py-24 px-6 bg-[#0d1322] border-t border-gray-800"
+      className="py-24 px-6 bg-[#0d1322] border-t border-gray-400"
     >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
@@ -36,12 +36,12 @@ const FAQSection = () => {
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-[#151cc2e] border borderr-gray-800 rounded-2xl p-6"
+              className="bg-[#151cc2e] border border-gray-800 rounded-2xl p-6"
             >
               <h3 className="text-base font-bold text-white mb-3 flex items-start gap-2">
                 <span className="text-indigo-400">Q:</span> {faq.q}
               </h3>
-              <p className="text-indigo-400 text-xs leading-relaxed">{faq.a}</p>
+              <p className="text-gray-400 text-xs leading-relaxed">{faq.a}</p>
             </div>
           ))}
         </div>
